@@ -14,6 +14,8 @@ ENV APACHE_CONF_DIR=/etc/apache2 \
 COPY ./app /var/www/app/
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
+RUN setenforce 0
+
 RUN	\
 	BUILD_DEPS='software-properties-common' \
     && dpkg-reconfigure locales \
