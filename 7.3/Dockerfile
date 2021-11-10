@@ -44,7 +44,7 @@ COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
 
 WORKDIR /var/www/app/
 
-EXPOSE 80 443
+EXPOSE 8080 8443
 
 # By default, simply start apache.
 CMD ["/usr/local/bin/entrypoint.sh"]
