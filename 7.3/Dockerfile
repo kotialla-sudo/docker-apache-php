@@ -38,9 +38,9 @@ RUN	\
 	&& chmod 755 /usr/local/bin/entrypoint.sh \
 	&& chown www-data:www-data ${PHP_DATA_DIR} -Rf
 
-COPY ./configs/apache2.conf ${APACHE_CONF_DIR}/apache2.conf
-COPY ./configs/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
-COPY ./configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
+COPY ./7.3/configs/apache2.conf ${APACHE_CONF_DIR}/apache2.conf
+COPY ./7.3/configs/app.conf ${APACHE_CONF_DIR}/sites-enabled/app.conf
+COPY ./7.3/configs/php.ini  ${PHP_CONF_DIR}/apache2/conf.d/custom.ini
 
 WORKDIR /var/www/app/
 
