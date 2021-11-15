@@ -12,7 +12,7 @@ ENV APACHE_CONF_DIR=/etc/apache2 \
     PHP_DATA_DIR=/var/lib/php
 
 COPY ./7.3/app /var/www/app/
-COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+COPY ./7.3/entrypoint.sh /usr/local/bin/entrypoint.sh
 
 RUN	\
 	BUILD_DEPS='software-properties-common' \
